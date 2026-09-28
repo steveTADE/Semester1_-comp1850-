@@ -2,5 +2,5 @@
  > name : steve  
  > age  : 19  
  > asian  
- > # **unempl*yed**  
- > # im hungry
+ > **unempl*yed**  
+ > im hungry
