@@ -1,4 +1,4 @@
 # things bout me
- > name : steve
+ > name : steve\n
  > age  : 19
  > asian
