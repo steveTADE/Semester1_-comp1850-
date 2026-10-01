@@ -1,5 +1,12 @@
-# Fill out the code to make a very simple calculator
+"""
+num_of_input = 2
+output_array = [0] * num_of_input
+output = 0
+for i in range(num_of_input):
+    output_array[i] = int(input("enter a number > "))
 
+output = sum(output_array)
+"""
 # ask the user to enter number1:
 usr_input_1 = int(input("enter a number > "))
     
