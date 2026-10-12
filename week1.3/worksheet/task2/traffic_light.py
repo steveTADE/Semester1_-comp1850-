@@ -7,31 +7,17 @@ Name: Steve
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
 
 sys_time = 0
-max_time = int(input("throw something in here > "))  # read an integer number of steps (>0)
+max_time = int(input())  # read an integer number of steps (>0)
 
 state = "red"
 
 while True:
     for key, number in states.items():
         for _i in range(number):
-            if sys_time >= max_time:
+            if sys_time > max_time:
                 exit()
             print(f"Time {sys_time:03} State {key}")
             sys_time += 1
-
-
-for i in range(max_time):
-    if tmp2 == 0:
-        tmp1 += 1
-        if tmp1 > length - 1: # allows it to loop back
-            tmp1 = 0
-        tmp2  = states[tmp_state[tmp1]]
-
-    print(states[tmp_state[tmp1]])
-    state = tmp_state[tmp1]
-    print(f"Time {i:03} State {state}, {tmp2}")
-    tmp2 -= 1
-
 
 # Simulate the traffic light system up to time=max_time in 1-second steps
 
