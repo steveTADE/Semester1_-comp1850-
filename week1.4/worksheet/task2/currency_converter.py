@@ -6,7 +6,7 @@
     other than any provided template code, was written and developed by
     you independently.
 
-    Name:
+    Name: Steve
 """
 
 def currency_converter(amount, from_currency, to_currency):
@@ -17,10 +17,16 @@ def currency_converter(amount, from_currency, to_currency):
         'PHP': {'CNY': 0.12, 'GBP': 0.01, 'INR': 1.45},
         'INR': {'PHP': 0.69, 'CNY': 0.09, 'GBP': 0.01}
     }
-
+    
     # your code here
-
-    return None
+    base_currency = conversion_rate.get(from_currency)
+    # stop the code from using invalid currency and the last condition stops bs from happening
+    if ( base_currency is None ) or ( conversion_rate.get(to_currency) is None ) or ( from_currency is to_currency ): 
+        return None
+    elif amount < 0:
+        return 0.0
+    conversion = base_currency.get(to_currency)
+    return amount * conversion
 
 # Submit only this file currency_converter.py with the completed function.
 
