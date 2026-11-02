@@ -6,7 +6,7 @@ class Person:
     """
     A Person, with a name and a date of birth.
     """
-
+    def __init__(self, name, age)
     # Write a constructor here to create and initialize name and
     # birth fields (see README.md for further details)
 
