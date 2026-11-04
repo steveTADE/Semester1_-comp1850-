@@ -44,4 +44,5 @@ class Rectangle:
     # Implement methods is_square(), area() & perimeter() here
     # (See README.md for details of what they should do)
 
-Rectangle(2, 0)
+if __name__ == "__main__": # for debug
+    Rectangle(2, 0) # test stuff
