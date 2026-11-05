@@ -35,6 +35,14 @@ class Shape:
             raise ValueError(f"invalid color: must be one of {VALID_COLOURS}")
 
         self.colour = colour
+    
+    def set_radius(self, radius):
+        """
+        Sets this shape's colour to the given colour.
+        """
+
+    
+
 
 
 # Implement your Circle class here

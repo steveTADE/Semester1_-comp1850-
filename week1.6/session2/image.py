@@ -56,11 +56,10 @@ class Image:
             raise ImageError("width cannot be < 1")
         if height < 1:
             raise ImageError("height cannot be < 1")
-
         self.width = width
         self.height = height
         self.max_value = maximum
-        self.pixels = [value] * (width * height)
+        self.pixels = value if isinstance(value, list) else [value] * (width * height)
 
     def read_pgm(self, filename):
         """
