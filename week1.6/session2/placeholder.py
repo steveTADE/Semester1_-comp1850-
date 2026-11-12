@@ -1,13 +1,13 @@
 from image import Image
 import perlin_noise, time
 
-grid_size = 1024
+grid_size = 512
 weights = [0] * (grid_size * grid_size)
 perlin = perlin_noise.PerlinNoise()
 perlin.octaves = 2.5
 
 
-def bucket_sort(weights : list, preset_limit : int) -> list:
+def self_made_bucket_sort(weights : list, preset_limit : int) -> list:
     length             = len(weights)
     output             = [0] * length        # this is for the output
     tmp                = [0] * (preset_limit + 1)  # this is for sorting it
@@ -28,6 +28,21 @@ def bucket_sort(weights : list, preset_limit : int) -> list:
         incrementing_index += 1
     return output
 
+def bucket_sort(weights: list, preset_limit: int) -> list:
+    output = [0] * len(weights)
+    tmp = [0] * (preset_limit + 1)
+
+    for value in weights:
+        tmp[value] += 1
+
+    index = 0
+
+    for value, count in enumerate(tmp):
+        if count:
+            output[index:index + count] = [value] * count
+            index += count
+
+    return output
 
 for row in range(grid_size):
     for col in range(grid_size):
