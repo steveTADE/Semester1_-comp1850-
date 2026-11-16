@@ -17,8 +17,9 @@ def calculate_average(scores):
     
     # add debug logging here
     
-    average = total_score // total_assignments
-    
+    average = total_score / total_assignments
+    logger.info(f' avg: {average}')
+    #print(average) # debug line
     # add a debug logging here
     
     return round(average,2)
