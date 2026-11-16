@@ -10,7 +10,7 @@ plt.xlabel('x')
 plt.ylabel('y=x^2')  # annotate
 
 plt.show()  # display
-
+plt.close()
 # Test the example as is on the slides
 # - Modify the data and the range
 # - Plot in different ways
