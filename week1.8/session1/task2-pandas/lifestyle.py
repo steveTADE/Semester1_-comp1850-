@@ -2,6 +2,9 @@ import pandas
 
 data = pandas.read_csv("lifestyle_data.csv")
 
+
+
+print(data.describe())
 # What data type is `data` as output from the `read_csv()` method?
 
 # For each of the following pieces of information, try and use pandas to find the answer from the dataset in 'data'

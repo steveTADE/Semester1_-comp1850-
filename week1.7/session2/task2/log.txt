@@ -1,0 +1,2 @@
+INFO:root:calculate_average(): started
+INFO:root: avg: 87.66666666666667
